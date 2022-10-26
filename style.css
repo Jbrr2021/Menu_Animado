@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Poppins:ital,wght@0,300;1,200;1,300;1,400;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #6BB84A;
+}
+
+nav{
+    border-radius: 40px;
+    background: #fff;
+    padding: 0 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
+}
+
+.content{
+    display: flex;
+    height: 120px;
+    align-items: center;
+    list-style: none;
+    position: relative;
+}
+
+.icone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 120px;
+    width: 95px;
+    text-decoration: none;
+    transition: all 0.5 cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.icone.active{
+    transform: translateY(-10px);
+}
+
+.awesome{
+    font-size: 38px;
+    color: #bfbebe;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+}
+
+.icone.active .awesome{
+    color: #6BB84A;
+}
+
+.text{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    color: #6BB84A;
+    opacity: 0;
+    transform: translateY(32px);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);        
+}
+
+.icone.active .text{
+    opacity: 1;
+}
+
+.indicador{
+    position: absolute;
+    top: -14px;
+    left: 48px;
+    height: 36px;
+    width: 36px;
+    background-color: #fff;
+    border: 6px solid #6BB84A;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.indicador::before,
+.indicador::after{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    height: 24px;
+    width: 19px;
+}
+
+.indicador::before{
+    left: -22px;
+    background-color: #fff;
+    border-top-right-radius: 25px;
+    box-shadow: 1px -13px #6BB84A;
+}
+
+.indicador::after{
+    right: -22px;
+    background-color: #fff;
+    border-top-left-radius: 25px;
+    box-shadow: -1px -13px #6BB84A;
+}
